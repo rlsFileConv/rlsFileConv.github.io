@@ -1,0 +1,25 @@
+<!doctype html><html><head><title>.Rsl File Converter</title><meta charset="utf-8" />
+	<link rel="stylesheet" href="css.css">
+	<script src="jq.min.js"></script>
+	<script src="xlsx.full.min.js"></script>
+	<script src="fs.js"></script>
+	<script src="main.js"></script>
+	</head>
+	<body>
+		<div class="centerDiv">
+			<h1>.Rsl To Csv Conerter</h1>
+			<div class="line"></div>
+			<div class="rows">
+				<span class="spans">1.</span>
+				<label class="custom modal-label"><input type="file" id="files" name="files[]" multiple />Select Files</label>
+			</div>
+			<div class="rows">				
+				<span class="spans" style="margin-left: 10px;">Set File Name: </span><input id="saveName" value="output.xlsx" type="text" />
+				<label id="btn" class="custom modal-label">Save</label>
+			</div>
+			<table><thead><tr></tr></thead></table>
+			<textarea id="textArea" rows="10" cols="100"></textarea>
+			<script>document.getElementById('files').addEventListener('change', handleFileSelect, false);document.getElementById('btn').addEventListener('click', handleFileSave, false);</script>
+		</div>
+	</body>
+</html>
